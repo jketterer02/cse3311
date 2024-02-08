@@ -1,22 +1,30 @@
 import javax.swing.*;
-import java.awt.FlowLayout;
-import java.awt.BorderLayout;
+import java.awt.*;
 
 public class gui_test extends JFrame {
 
-    public gui_test() {
+    //label that displays texts
+    public gui_test()
+    {
         //Title
         super("GUI Test");
         //Layout Type
-        setLayout(new FlowLayout());
-        //Button
-        JButton button = new JButton("Click me!");
-        //Adds button
-        add(button);
+        setLayout(new GridLayout(2,2));
         //Exits when closed
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //Size
-        setSize(300, 200);
+        setSize(500, 500);
+
+
+        //Button
+        JButton button = new JButton("Click me!");
+        add(button);
+
+        JLabel label = new JLabel("Example Text!");
+        label.setAlignmentX(CENTER_ALIGNMENT);
+        add(label);
+
+
         //visiblity
         setVisible(true);
     }
